@@ -3,41 +3,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>זוגיות</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="/css/registration_page_styles.css">
 </head>
 <body>
-	<body background="/img/font.jpg">
 
 	<!-- haut de page -->
 	<header>
 	</header>
 
 	<?php
-
-	echo "Veuiller creer un compte";
-
-	?>
+		require_once 'header.php';
+		?>
 
 	<!-- register -->
-	<div id="register_block">
-
-		<?php include 'database.php';
-		global $db; ?>
+	<div id="register_div" class="register_div">
 
 		<form method="post">
-			<input type="email" name="email" id="email" placeholder="email" required><br>
-			<input type="password" name="password" id="password" placeholder="password" required><br>
+			<input type="id" name="id" id="id" placeholder="ID" min="9" maxlength="9" required><br>
+			<input type="firstname" name="first_name" id="firstname" placeholder="First Name" required><br>
+			<input type="lastname" name="last_name" id="lastname" placeholder="Last Name" required><br>
+			<input type="email" name="email" id="email" placeholder="Mail" required><br>
+			<input type="password" name="password" id="password" placeholder="Password" required><br>
 			<input type="password" name="cpassword" id="cpassword" placeholder="password confirmation" required><br>
-			<input type="submit" name="formsend" id="formsend"><br>
+			<input type="radio" name="gender" id="male" required>
+			<label for="male">Male</label>
+			<input type="radio" name="gender" id="female">
+			<label for="female">Female</label>
+			<input type="radio" name="gender" id="other">
+			<label for="other">Other</label><br>
+
+			<input type="submit" name="register" id="register"><br>
 		</form>
 
 		<?php include 'register.php'; ?>
 
 		<br><br>
 
-		<a href="/">returne to login page</a>
+		<a href="/">Return to login page</a>
 
 	</div>
 

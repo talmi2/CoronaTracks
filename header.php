@@ -5,10 +5,13 @@
     <title></title>
   </head>
   <body>
+    <?php include 'database.php';
+    global $db;
+     ?>
     <nav class="menu_nav">
   		<ul>
   			<li class="nav">
-  				<a href="index.php">
+  				<a href="home.php">
   				   Home
   				</a>
   			</li>
