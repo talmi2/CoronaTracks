@@ -1,38 +1,36 @@
-<?php  
-	
-	if (isset($_POST['formlogin']))
-	{
+<?php
+
+	if (isset($_POST['formlogin']))	{
 		extract($_POST);
 
-		if (!empty($lemail) && !empty($lpassword))
-		{
-			$q = $db->prepare("SELECT * FROM user WHERE email = :email");
-			$q->execute(['email' => $lemail]);
+		if (!empty($email) && !empty($password)){
+			$q = $db->prepare("SELECT * FROM doctor_data WHERE Mail = :Mail");
+			$q->execute(['Mail' => $email]);
 			$result = $q->fetch();
 
-			if ($result == true)
-			{
+			if ($result == true){
 				// le compte existe
-				if (password_verify($lpassword, $result['password']))
-				{
-					echo "connection OK!";
-					header('Location: /includes/home_page.php');
+				if (password_verify($password, $result['Password'])){
 
-					$_SESSION['email'] = $result['email'];
+					$_SESSION['Mail'] = $result['Mail'];
+					?>
+					<meta http-equiv="refresh" content="0.0001;URL=/CoronaTracks/home.php">
+					<?php
+
+
 
 				}
-				else
-				{
-					echo "Le mot de passe est incorecte";
+				else {
+					echo "Incorrect password";
 				}
 			}
-			else
-			{
-				echo "le compte portant l'email " . $lemail. " n'existe pas";
+			else {
+				echo "Incorrect mail";
 			}
 		}
-
-		else{ echo "Veuillez remplire l'ensemble des champ";}
+		else {
+			echo "Complet all field";
+		}
 	}
 
 ?>

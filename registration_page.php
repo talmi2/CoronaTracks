@@ -39,7 +39,7 @@
 
 		<br><br>
 
-		<a href="/">Return to login page</a>
+		<a href="/CoronaTracks/login_page.php">Return to login page</a>
 
 	</div>
 

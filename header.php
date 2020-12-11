@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -39,5 +40,12 @@
   			</li>
   		</ul>
   	</nav><br><br>
+
+    <?php
+    if (isset($_SESSION['Mail'])) {
+      require_once 'deconnection.php';
+    }
+     ?>
+
   </body>
 </html>
