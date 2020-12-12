@@ -10,13 +10,17 @@
   		require_once 'header.php';
   		?>
 
-      
+
     <p>You don't have an account?<a href="registration_page.php">Subscribe</a></p>
 
     <form method="post">
+     <label id="lemail">Mail:</label>
      <input type="email" name="email" id="email" placeholder="mail" required><br>
+
+     <label id="lpassword">Password:</label>
      <input type="password" name="password" id="password" placeholder="password" required><br>
-     <input type="submit" name="formlogin" id="formlogin" value="login"><br>
+
+     <input type="submit" name="formlogin" id="formlogin" value="login">
    </form>
 
    <?php include 'login.php'; ?>
