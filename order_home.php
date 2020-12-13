@@ -17,5 +17,9 @@
 
         <input type="submit" name="order_type_submit" id="order_type_submit">
       </form>
+      <?php
+        require_once 'footer.php';
+
+        ?>
   </body>
 </html>

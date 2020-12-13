@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <?php
-      require_once 'header.php';
-      ?>
+<?php
+  if (isset($_POST['formmessage']))	{
+    extract($_POST);
 
-  </body>
-</html>
+    $q = $db->prepare("INSERT INTO message_stocking(message,date) VALUES(:message,:date)");
+    $q->execute([
+      'message'=> $message,
+      'date'=> $date
+    ]);
+    ?>
+    <meta http-equiv="refresh" content="0.0001;URL=/CoronaTracks/home_confirmation.php">
+    <?php
+  }
+ ?>

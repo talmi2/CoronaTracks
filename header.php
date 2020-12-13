@@ -12,13 +12,13 @@
     <nav class="menu_nav">
   		<ul>
   			<li class="nav">
-  				<a href="home.php">
+  				<a href="home_page.php">
   				   Home
   				</a>
   			</li>
 
   			<li class="nav">
-  				<a href="corona_news.php">
+  				<a href="corona_news_page.php">
              CoronaNews
   				</a>
   			</li>

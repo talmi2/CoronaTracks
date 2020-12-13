@@ -31,18 +31,24 @@
   		require_once 'header.php';
   		?>
 
-      
-      <h2> Log in to your acccount: </h2>
-    
+
+      <h2> Log in to your account: </h2>
+
 
     <form method="post">
-     <input type="email" name="email" id="email" placeholder="mail" required><br>
-     <input type="password" name="password" id="password" placeholder="password" required><br>
-     <input type="submit" name="formlogin" id="formlogin" value="login"><br>
+      <label id="lemail">Email: </label>
+      <input type="email" name="email" id="email" placeholder="mail" required><br>
+
+      <label id="lpassword">Password: </label>
+      <input type="password" name="password" id="password" placeholder="password" required><br>
+      <input type="submit" name="formlogin" id="formlogin" value="login"><br>
    </form>
 
    <p class="msg">You don't have an account ?<a href="registration_page.php">Subscribe</a></p>
    <?php include 'login.php'; ?>
 
+   <?php
+ 		require_once 'footer.php';
+ 		?>
   </body>
 </html>

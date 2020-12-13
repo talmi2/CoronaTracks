@@ -27,5 +27,9 @@
         echo "Order succeed, the $order_type is in this way to you";
       }
       ?>
+      <?php
+        require_once 'footer.php';
+
+        ?>
   </body>
 </html>

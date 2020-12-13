@@ -14,7 +14,7 @@
 
 					$_SESSION['Mail'] = $result['Mail'];
 					?>
-					<meta http-equiv="refresh" content="0.0001;URL=/CoronaTracks/home.php">
+					<meta http-equiv="refresh" content="0.0001;URL=/CoronaTracks/home_page.php">
 					<?php
 
 

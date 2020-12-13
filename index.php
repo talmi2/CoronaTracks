@@ -36,13 +36,13 @@
     	  text-align: center;
        	 height: 50px;
        	 color: white;
-       
+
     }
     .Doctor{
     	  text-align: center;
        	 height: 50px;
        	 color: white;
-       
+
     }
 
   </style>
@@ -51,7 +51,7 @@
  <body>
 
 <h1>CoronaTracks</h1>
-	
+
 
 <p class="intro1"> <br> <br> <br> <br> Nowadays, the CoronaVirus still exists among us. <br></p>
 
@@ -62,7 +62,7 @@
 <p class="youare"> <br>You are: </p>
 
 <div id="buttons">
-<button type="button" name="User" id="User" class="User"><a href="home.php">Not a Doctor </a></button>
+<button type="button" name="User" id="User" class="User"><a href="home_page.php">User </a></button>
 <button type="button" name="Doctor" id="Doctor" class="Doctor"><a href="login_page.php">Doctor</a></button>
 </div>
  </body>
