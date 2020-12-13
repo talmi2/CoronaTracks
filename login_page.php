@@ -13,6 +13,7 @@
       }
        body{
       background-color: #364061;
+      text-align: center;
     }
     .msg{
       color: white;
@@ -31,7 +32,7 @@
   		?>
 
       
-      <h2> Log in to yout acccount: </h2>
+      <h2> Log in to your acccount: </h2>
     
 
     <form method="post">
