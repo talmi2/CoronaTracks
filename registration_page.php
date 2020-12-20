@@ -69,7 +69,7 @@
 			<input type="radio" name="gender" id="female">
 			<label for="female">Female</label><br>
 
-			<input type="submit" name="register" id="register"><br>
+			<input type="submit" name="register" id="register" value="Submit"><br>
 		</form>
 
 		<?php include 'register.php'; ?>
