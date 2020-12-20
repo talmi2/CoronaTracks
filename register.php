@@ -33,7 +33,7 @@
 									'Gender'=> $gender,
 									'Password' => $hashpass
 								]);
-								echo "The compt is create, you must sent your diploma to the mail: talouche@hotmail.fr";
+								echo "Your account was successfully created, to complete your registration as a doctor, please send your medical degree to the mail: talouche@hotmail.fr";
 								?>
 									<a href="/CoronaTarcks"></a>
 								<?php
