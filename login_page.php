@@ -8,9 +8,7 @@
   color: white;
   font-size: 50px;
     }
-      .menu_nav{
-        display:none;
-      }
+     
        body{
       background-color: #364061;
       text-align: center;
@@ -32,7 +30,7 @@
     </style>
   </head>
   <body>
-    <header> <h1> CoronaTracks </h1> </header>
+   
     <?php
   		require_once 'header.php';
   		?>
