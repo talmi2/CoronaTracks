@@ -31,7 +31,7 @@
         <label id="ltest">Order a Test</label>
         <input type="radio" name="order_type" id="test" value="test"><br>
 
-        <input type="submit" name="order_type_submit" id="order_type_submit" class="button">
+        <input type="submit" name="order_type_submit" id="order_type_submit" class="button" value="Submit">
       </form>
       <?php
         require_once 'footer.php';
