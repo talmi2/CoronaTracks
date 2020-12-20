@@ -3,6 +3,54 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style>
+      body{
+      background-color: #364061;
+      text-align: center;
+    
+    }
+    h2{
+      color:white;
+    }
+    #id{
+      width: 240px;
+      display:inline-block;
+    }
+    
+      #firstname{
+      width: 240px;
+      display:inline-block;
+    
+    }
+      #lastname{
+      width: 240px;
+      display:inline-block;
+    
+    }
+      #lemail{
+      width: 240px;
+      display:inline-block;
+    
+    }
+      #ladress{
+      width: 240px;
+      display:inline-block;
+    }
+      #ltel{
+      width: 240px;
+      display:inline-block;
+    }
+      #lquantity{
+      width: 240px;
+      display:inline-block;
+    }
+    .button{
+      width: 100px;
+      border: 3px solid #364061;
+      padding: 10px;
+
+    }
+    </style>
   </head>
   <body>
     <?php
@@ -38,7 +86,7 @@
 
           <input type="order_type" name="order_type" id="order_type" value="<?php echo $order_type; ?>" style="display:none" required>
 
-          <input type="submit" name="order" id="order">
+          <input type="submit" name="order" id="order" class="button">
         </form>
         <?php
       }

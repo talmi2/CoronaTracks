@@ -2,12 +2,21 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <style>
+       body{
+      background-color: #364061;
+      text-align: center;
+    }
+    h1{
+      color: white;
+    }
+    </style>
   </head>
   <body>
     <?php
       require_once 'header.php';
       ?>
-      <h1>Here is the place to tell new information, that you read or heard about the corona </h1>
+      <h1>Write down the latest information about the Covid-19: </h1>
       <form method="post">
         <input type="text" name="message">
         <input type="text" name="date" value="<?php echo time(); ?>" style="display:none" >

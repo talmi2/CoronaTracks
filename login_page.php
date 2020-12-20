@@ -23,6 +23,12 @@
     h2{
       color: white;
     }
+    #lemail{
+      color: white;
+    }
+    #lpassword{
+      color: white;
+    }
     </style>
   </head>
   <body>

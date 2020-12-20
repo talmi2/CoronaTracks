@@ -2,12 +2,25 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <style>
+ 
+      
+      body{
+      background-color: #364061;
+      text-align: center;
+    }
+    h1{
+      color:white;
+    }
+
+    </style>
   </head>
   <body>
     <?php
       require_once 'header.php';
       ?>
-      <h1>Here is the place to tell,for sick people, about what they have been doing the last couples of days </h1>
+     
+      <h1>If you are sick or covid-positive, please write down which places did you visit for the last days: </h1>
       <form method="post">
         <input type="text" name="message">
         <input type="text" name="date" value="<?php echo time(); ?>" style="display:none" >
