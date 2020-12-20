@@ -14,15 +14,19 @@
       }
        body{
       background-color: #364061;
-      text-align: center;
+            text-align: center;
+
+      
     }
     h2{
     	color: white;
     }
-    .male{
-    	color:white;
+  
+    label{
+    	display: inline-block;
+    	width: 100px;
+    	color: white;
     }
-
 
     </style>
 </head>
@@ -51,7 +55,7 @@
 			<label id="lastname">Last name:</label>
 			<input type="lastname" name="last_name" id="lastname" placeholder="Last Name" required><br>
 
-			<label id="lemail">Mail:</label>
+			<label id="lemail">Mail: </label>
 			<input type="email" name="email" id="email" placeholder="Mail" required><br>
 
 			<label id="lpassword">Password: </label>
