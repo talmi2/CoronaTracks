@@ -12,43 +12,16 @@
     h2{
       color:white;
     }
-    #id{
-      width: 240px;
-      display:inline-block;
-    }
-    
-      #firstname{
-      width: 240px;
-      display:inline-block;
-    
-    }
-      #lastname{
-      width: 240px;
-      display:inline-block;
-    
-    }
-      #lemail{
-      width: 240px;
-      display:inline-block;
-    
-    }
-      #ladress{
-      width: 240px;
-      display:inline-block;
-    }
-      #ltel{
-      width: 240px;
-      display:inline-block;
-    }
-      #lquantity{
-      width: 240px;
-      display:inline-block;
-    }
-    .button{
+    label{
+      display: inline-block;
       width: 100px;
-      border: 3px solid #364061;
-      padding: 10px;
-
+      color: white;
+    }
+    #order{
+       display: inline-block;
+      width: 100px;
+     
+     
     }
     </style>
   </head>
@@ -86,7 +59,7 @@
 
           <input type="order_type" name="order_type" id="order_type" value="<?php echo $order_type; ?>" style="display:none" required>
 
-          <input type="submit" name="order" id="order" class="button">
+          <input type="submit" name="order" id="order" class="button" value="Submit">
         </form>
         <?php
       }
