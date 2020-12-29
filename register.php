@@ -17,28 +17,38 @@
 
 							$hashpass = password_hash($password, PASSWORD_BCRYPT, $options);
 
+							$a = $db->prepare("SELECT ID FROM doctor_data WHERE ID = :ID");
+							$a->execute(['ID' => $id]);
 
-							$c = $db->prepare("SELECT Mail FROM doctor_data WHERE Mail = :Mail");
-							$c->execute(['Mail' => $email]);
+							$answer = $a->rowCount();
 
-							$result = $c->rowCount();
+							if($answer == 0) {
 
-							if ($result == 0) {
-								$q = $db->prepare("INSERT INTO doctor_data(ID,First_Name,Last_Name,Mail,Gender,Password) VALUES(:ID,:First_Name,:Last_Name,:Mail,:Gender,:Password)");
-								$q->execute([
-									'ID' => $id,
-									'First_Name'=> $first_name,
-									'Last_Name'=> $last_name,
-									'Mail' => $email,
-									'Gender'=> $gender,
-									'Password' => $hashpass
-								]);
-								echo "Your account was successfully created, to complete your registration as a doctor, please send your medical degree to the mail: talouche@hotmail.fr";
-								?>
-									<a href="/CoronaTarcks"></a>
-								<?php
-							} else {
-								echo "This mail already exist";
+								$c = $db->prepare("SELECT Mail FROM doctor_data WHERE Mail = :Mail");
+								$c->execute(['Mail' => $email]);
+
+								$result = $c->rowCount();
+
+								if ($result == 0) {
+									$q = $db->prepare("INSERT INTO doctor_data(ID,First_Name,Last_Name,Mail,Gender,Password,Type) VALUES(:ID,:First_Name,:Last_Name,:Mail,:Gender,:Password,:Type)");
+									$q->execute([
+										'ID' => $id,
+										'First_Name'=> $first_name,
+										'Last_Name'=> $last_name,
+										'Mail' => $email,
+										'Gender'=> $gender,
+										'Password' => $hashpass,
+										'Type' => 'doctor'
+									]);
+									echo "Your account was successfully created, to complete your registration as a doctor, please send your medical degree to the mail: talouche@hotmail.fr";
+									?>
+										<a href="/CoronaTarcks"></a>
+									<?php
+								} else {
+									echo "This mail already exist";
+								}
+							} else 	{
+								echo "There is already an account with this ID";
 							}
 
 						} else {

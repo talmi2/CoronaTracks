@@ -9,10 +9,11 @@
 			$result = $q->fetch();
 
 			if ($result == true){
-				// le compte existe
+			
 				if (password_verify($password, $result['Password'])){
 
 					$_SESSION['Mail'] = $result['Mail'];
+					$_SESSION['Type'] = $result['Type'];
 					?>
 					<meta http-equiv="refresh" content="0.0001;URL=/CoronaTracks/home_page.php">
 					<?php
@@ -29,7 +30,7 @@
 			}
 		}
 		else {
-			echo "Complet all field";
+			echo "Complete all field";
 		}
 	}
 

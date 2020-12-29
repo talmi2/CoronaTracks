@@ -37,6 +37,17 @@
           <p>
             <span><?php echo $res['message']; ?></span>
             <span><?php echo date('m/d/Y H:i', $res['date']); ?></span>
+            <?php
+            if ($_SESSION['Type'] == 'admin'){
+              ?>
+              <form class="form_remove" action="remove_news.php" method="post">
+                <input type="text" name="Id" value = "<?php echo $res['ID'];?>" style=display:none >
+                <button type="submit" name="remove" value="Remove">Remove</button>
+
+              </form>
+                <?php
+                    }
+             ?>
           </p>
 
         </div>

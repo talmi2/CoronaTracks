@@ -16,12 +16,12 @@
       background-color: #364061;
             text-align: center;
 
-      
+
     }
     h2{
     	color: white;
     }
-  
+
     label{
     	display: inline-block;
     	width: 100px;
@@ -64,9 +64,9 @@
 			<label id="lcpassword">Password confirmation: </label>
 			<input type="password" name="cpassword" id="cpassword" placeholder="password confirmation" required><br>
 
-			<input type="radio" name="gender" id="male" required>
+			<input type="radio" name="gender" value="male" id="male" required>
 			<label for="male">Male</label>
-			<input type="radio" name="gender" id="female">
+			<input type="radio" name="gender" value="female" id="female">
 			<label for="female">Female</label><br>
 
 			<input type="submit" name="register" id="register" value="Submit"><br>
