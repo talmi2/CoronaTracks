@@ -7,7 +7,7 @@
     color: white;
     text-align: center;
     bottom: 5px;
-    position: absolute;
+    
   
   }
     </style>
