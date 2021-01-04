@@ -3,6 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style>
+    	body{
+    		background-image: url("wallpaper4.jpg")
+    	}
+    	p{
+    		color: white;
+    		font-size: 20px;
+    	}
+    </style>
   </head>
   <body>
 

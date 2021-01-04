@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <style>
-
-
+ 
+      
       body{
       background-color: #364061;
       text-align: center;
@@ -12,6 +12,34 @@
     h1{
       color:white;
     }
+    #message{
+      color: white;
+    }
+    #date{
+      color: white;
+
+    }
+    #home{
+       border-width:5px;
+      border-style:solid;
+      border-color:#2b334e;
+      background-color: #2b334e;
+    }
+    #formmessage{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #1E90FF;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 14px;
+  width: 80px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+
+}
 
     </style>
   </head>
@@ -38,20 +66,9 @@
       foreach ($result as $res) {
         ?>
         <div>
-          <p>
-            <span><?php echo $res['message']; ?></span>
-            <span><?php echo date('m/d/Y H:i', $res['date']); ?></span>
-            <?php
-            if ($_SESSION['Type'] == 'admin'){
-              ?>
-              <form class="form_remove" action="remove_home.php" method="post">
-                <input type="text" name="Id" value = "<?php echo $res['ID'];?>" style=display:none >
-                <button type="submit" name="remove" value="Remove">Remove</button>
-
-              </form>
-                <?php
-                    }
-             ?>
+          <p id="home" class="home">
+            <span id="message" class="message"><?php echo $res['message']; ?></span>
+            <span id="date" class="date"><?php echo date('m/d/Y H:i', $res['date']); ?></span>
           </p>
 
         </div>

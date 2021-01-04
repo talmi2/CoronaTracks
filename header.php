@@ -4,8 +4,11 @@
   <head>
     <meta charset="utf-8">
     <style>
+      body{
+        background-image: url("wallpaper4.jpg");     
+         }
       .menu_nav{
-        background-color: #2b334e;
+        background-color: #1E90FF;
   overflow: hidden;
   text-align: center;
   font-size: 15px;
@@ -15,7 +18,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #2b334e
+  background-color: #1E90FF;
 
       }
       li {
@@ -31,6 +34,18 @@
     li a:hover {
   background-color: #111;
 }
+
+#deconnection{
+    background-color: #1E90FF; 
+  border: none;
+  color: white;
+  padding: 7px 18px;
+  text-decoration: none;
+  font-size: 16px;
+  float: right;
+}
+
+
     </style>
   </head>
   <body>

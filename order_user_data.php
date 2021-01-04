@@ -18,8 +18,20 @@
       color: white;
     }
     #order{
-       display: inline-block;
-      width: 100px;
+        
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #1E90FF;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 14px;
+  width: 80px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
      
      
     }

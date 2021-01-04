@@ -3,21 +3,33 @@
   <head>
     <meta charset="utf-8">
     <style>
-       body{
-      background-color: #364061;
-      text-align: center;
-    }
-    #lvaccin{
-      color: white;
-    }
-    #ltest{
-      color:white;
-    }
-    .button{
-    text-align: center;
-    margin-top: 50px;
-    position: absolute;
-    }
+      body{
+        text-align: center;
+      }
+      #lvaccin{
+        font-size: 25px;
+        color: white;
+      }
+     #ltest{
+        font-size: 25px;
+        color: white;
+      
+      }
+      #order_type_submit{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #1E90FF;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 14px;
+  width: 80px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+   
     </style>
   </head>
   <body>
@@ -26,9 +38,9 @@
       ?>
 
       <form action="order_user_data.php" method="post">
-        <label id="lvaccin">Order a Vaccin</label>
+        <label id="lvaccin"> Order a Vaccin </label>
         <input type="radio" name="order_type" id="vaccin" value="vaccin" required><br>
-        <label id="ltest">Order a Test</label>
+        <label id="ltest">Order a Test </label>
         <input type="radio" name="order_type" id="test" value="test"><br>
 
         <input type="submit" name="order_type_submit" id="order_type_submit" class="button" value="Submit">
