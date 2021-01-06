@@ -40,7 +40,49 @@
   margin: 5px;
 
 }
+#form_doctolib{
+      display: inline-block;
+    border-radius: 4px;
+    background-color: #1E90FF;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 14px;
+    width: 80px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+#doctolib_forum_doc,#doctolib_forum_admin,#doctolib_forum{
+  border-width: 10px;
+    border-style: solid;
+    border-color: #4682B4;
+    background-color: #4682B4;
+    color: white;
 
+}
+#author_admin{
+  color: red;
+}
+#author_doc{
+  color:#00FF00;
+}
+#remove{
+  
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #B22222;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 8px;
+    padding: 7px;
+    width: 40px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 2px;
+}
     </style>
   </head>
   <body>
@@ -54,7 +96,7 @@
         <input type="text" name="message" required>
         <input type="text" name="date" value="<?php echo time(); ?>" style="display:none" >
         <input type="text" name="topic" value="<?php echo $_GET['topic']; ?>" style="display:none" >
-        <input type="submit" name="form_doctolib" id="form_doctolib" value="Submit">
+        <input type="submit" name="form_doctolib" id="form_doctolib" value="Post">
       </form>
       <?php include 'doctolib_forum.php'; ?>
 

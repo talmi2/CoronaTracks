@@ -26,12 +26,31 @@
       width: 100px;
       color: white;
     }
-
+    #formlogin{
+      display: inline-block;
+    border-radius: 4px;
+    background-color: #1E90FF;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 14px;
+    width: 80px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    }
+    #subscribe:link {color:#1E90FF;}
+    #subscribe:visited {color:#1E90FF;}
+    #subscribe:hover {color:#ffcc00;}
+    #error{
+      color: red;
+    }
     </style>
   </head>
   <body>
    
-    <?php
+    <?
   		require_once 'header.php';
   		?>
 
@@ -45,10 +64,10 @@
 
       <label id="lpassword">Password: </label>
       <input type="password" name="password" id="password" placeholder="password" required><br>
-      <input type="submit" name="formlogin" id="formlogin" value="login"><br>
+      <input type="submit" name="formlogin" id="formlogin" value="Login"><br>
    </form>
 
-   <p class="msg">You don't have an account ?<a href="registration_page.php">Subscribe</a></p>
+   <p class="msg">You don't have an account ?<a id="subscribe" href="registration_page.php">Subscribe</a></p>
    <?php include 'login.php'; ?>
 
    <?php

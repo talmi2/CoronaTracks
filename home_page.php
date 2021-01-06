@@ -39,7 +39,34 @@
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+}
 
+#home,#home_doc,#home_admin{
+  border-width: 15px;
+    border-style: solid;
+    border-color: #2b334e;
+    background-color: #2b334e;
+    color: white;
+}
+#author_admin{
+  color: red;
+}
+#author_doc{
+  color:#00FF00;
+}
+#remove{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #B22222;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 8px;
+  padding: 7px;
+  width: 40px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2px;
 }
 
     </style>

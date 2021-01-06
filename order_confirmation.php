@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style>
+      #order_succeed{
+        color:white;
+      }
+    </style>
   </head>
   <body>
     <?php
@@ -25,7 +30,7 @@
         ]);
 
         ?>
-        <span id="order_succeed" class="order_succeed"><?php echo "Order succeed, the $order_type is in this way to you"; ?></span>
+        <span id="order_succeed" class="order_succeed"><?php echo "Successful Order, the $order_type is on its way to you."; ?></span>
         <?php
         
       }

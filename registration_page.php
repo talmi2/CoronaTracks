@@ -27,6 +27,41 @@
     	width: 100px;
     	color: white;
     }
+    #register{
+      display: inline-block;
+    border-radius: 4px;
+    background-color: #1E90FF;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 14px;
+    width: 80px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    }
+    #return{
+   	align-content: left;
+    border-radius: 4px;
+    background-color: #1E90FF;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 7px;
+    width: 80px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 3px;
+    text-decoration: none;
+    }
+    #error{
+    	color: red;
+    }
+    #success{
+    	color: #7CFC00;
+    }
 
     </style>
 </head>
@@ -76,9 +111,9 @@
 
 		<br><br>
 
-		<a href="/CoronaTracks/login_page.php">Return to login page</a>
+		<a id="return" href="/CoronaTracks/login_page.php">Return to login page</a>
 
-	</div
+	</div>
 
 	<?php
 		require_once 'footer.php';

@@ -28,7 +28,7 @@
 #remove{
   display: inline-block;
   border-radius: 4px;
-  background-color: #1E90FF;
+  background-color: #B22222;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -39,9 +39,21 @@
   cursor: pointer;
   margin: 2px;
 }
- #msg{
-      color: white;
-    }
+ #msgg{
+     
+  border-width: 15px;
+    border-style: solid;
+    border-color: #800000;
+    background-color: #800000;
+    color: white;
+}
+#author_admin{
+  color: red;
+}
+#author_doc{
+  color:#00FF00;
+}
+    
     </style>
   </head>
   <body>
@@ -70,7 +82,7 @@
         if($res['author'] == 'Admin'){
         ?>
         <div>
-          <p>
+          <p id="msgg">
             <span><?php echo $res['message']; ?></span>
             <span id="author_admin" class="author_admin"><?php echo $res['author']; ?></span>
             <span><?php echo date('m/d/Y H:i', $res['date']); ?></span>
@@ -94,7 +106,7 @@
         } elseif($res['author'] != 'Anonymous'){
         ?>
         <div>
-          <p>
+          <p id="msgg">
             <span><?php echo $res['message']; ?></span>
             <span id="author_doc" class="author_doc"><?php echo $res['author']; ?></span>
             <span><?php echo date('m/d/Y H:i', $res['date']); ?></span>
@@ -118,7 +130,7 @@
         } else {
           ?>
         <div>
-          <p>
+          <p id="msgg">
             <span><?php echo $res['message']; ?></span>
             <span id="author" class="author"><?php echo $res['author']; ?></span>
             <span><?php echo date('m/d/Y H:i', $res['date']); ?></span>

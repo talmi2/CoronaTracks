@@ -40,9 +40,10 @@
 										'Password' => $hashpass,
 										'Type' => 'doctor'
 									]);
-									echo "Your account was successfully created, to complete your registration as a doctor, please send your medical degree to the mail: talouche@hotmail.fr";
-									?>
-										<a href="/CoronaTarcks"></a>
+									?><span id="success"><?php echo "Your account was successfully created, to complete your registration as a doctor, please send your medical degree to the mail: talouche@hotmail.fr";
+										?></span>
+										<a href="/CoronaTracks"></a>
+										
 									<?php
 								} else {
 									?>
