@@ -22,15 +22,21 @@
 
 				}
 				else {
-					echo "Incorrect password";
+					?>
+					<span id="error" class="error"><?php echo "Incorrect password"; ?></span>
+					<?php
 				}
 			}
 			else {
-				echo "Incorrect mail";
+				?>
+				<span id="error" class="error"><?php echo "Incorrect mail"; ?></span>
+				<?php
 			}
 		}
 		else {
-			echo "Complete all field";
+			?>
+			<span id="error" class="error"><?php echo "Complete all field"; ?></span>
+			<?php
 		}
 	}
 

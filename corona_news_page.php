@@ -51,7 +51,7 @@
       <h1>Write down the latest information about the Covid-19: </h1>
       <div id="msg">
       <form method="post">
-        <input type="text" name="message">
+        <input type="text" name="message" required>
         <input type="text" name="date" value="<?php echo time(); ?>" style="display:none" >
         <input type="submit" name="formnews" id="formnews" value="Submit">
       </form>
@@ -66,26 +66,80 @@
       date_default_timezone_set('Asia/Jerusalem');
 
       foreach ($result as $res) {
+        
+        if($res['author'] == 'Admin'){
         ?>
         <div>
           <p>
             <span><?php echo $res['message']; ?></span>
+            <span id="author_admin" class="author_admin"><?php echo $res['author']; ?></span>
             <span><?php echo date('m/d/Y H:i', $res['date']); ?></span>
             <?php
-            if ($_SESSION['Type'] == 'admin'){
-              ?>
-              <form class="form_remove" action="remove_news.php" method="post">
-                <input type="text" name="Id" value = "<?php echo $res['ID'];?>" style=display:none >
-                <button type="submit" name="remove" value="Remove" id="remove">Remove</button>
+            if (isset($_SESSION['Type'])) {
+              if ($_SESSION['Type'] == 'admin'){
+                ?>
+                <form class="form_remove" action="remove_news.php" method="post">
+                  <input type="text" name="Id" value = "<?php echo $res['ID'];?>" style=display:none >
+                  <button type="submit" name="remove" value="Remove" id="remove">Remove</button>
 
-              </form>
-                <?php
+                </form>
+                  <?php
+                      }
                     }
              ?>
           </p>
 
         </div>
         <?php
+        } elseif($res['author'] != 'Anonymous'){
+        ?>
+        <div>
+          <p>
+            <span><?php echo $res['message']; ?></span>
+            <span id="author_doc" class="author_doc"><?php echo $res['author']; ?></span>
+            <span><?php echo date('m/d/Y H:i', $res['date']); ?></span>
+            <?php
+            if (isset($_SESSION['Type'])) {
+              if ($_SESSION['Type'] == 'admin'){
+                ?>
+                <form class="form_remove" action="remove_news.php" method="post">
+                  <input type="text" name="Id" value = "<?php echo $res['ID'];?>" style=display:none >
+                  <button type="submit" name="remove" value="Remove" id="remove">Remove</button>
+
+                </form>
+                  <?php
+                      }
+                    }
+             ?>
+          </p>
+
+        </div>
+        <?php
+        } else {
+          ?>
+        <div>
+          <p>
+            <span><?php echo $res['message']; ?></span>
+            <span id="author" class="author"><?php echo $res['author']; ?></span>
+            <span><?php echo date('m/d/Y H:i', $res['date']); ?></span>
+            <?php
+            if (isset($_SESSION['Type'])) {
+              if ($_SESSION['Type'] == 'admin'){
+                ?>
+                <form class="form_remove" action="remove_news.php" method="post">
+                  <input type="text" name="Id" value = "<?php echo $res['ID'];?>" style=display:none >
+                  <button type="submit" name="remove" value="Remove" id="remove">Remove</button>
+
+                </form>
+                  <?php
+                      }
+                    }
+             ?>
+          </p>
+
+        </div>
+        <?php
+        }
       }
        ?>
 

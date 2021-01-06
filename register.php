@@ -45,14 +45,20 @@
 										<a href="/CoronaTarcks"></a>
 									<?php
 								} else {
-									echo "This mail already exist";
+									?>
+									<span id="error" class="error"><?php echo "This mail already exist"; ?></span>
+									<?php									
 								}
 							} else 	{
-								echo "There is already an account with this ID";
+								?>
+								<span id="error" class="error"><?php echo "There is already an account with this ID"; ?></span>
+								<?php	
 							}
 
 						} else {
-							echo "The password confirmation is not valid";
+							?>
+							<span id="error" class="error"><?php echo "The password confirmation is not valid"; ?></span>
+							<?php
 						}
 
 				}

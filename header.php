@@ -58,7 +58,7 @@
 
   			<li><a href="corona_news_page.php">CoronaNews</a></li>
 
-  			<li><a href="doctolib_home.php">Doctolib Forum</a></li>
+  			<li><a href="doctolib_home_page.php">Doctolib Forum</a></li>
        
         <li><a href="map.php">Map</a></li>
         

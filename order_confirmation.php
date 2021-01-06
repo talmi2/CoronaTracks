@@ -24,7 +24,10 @@
           'Type'=> $order_type
         ]);
 
-        echo "Order succeed, the $order_type is in this way to you";
+        ?>
+        <span id="order_succeed" class="order_succeed"><?php echo "Order succeed, the $order_type is in this way to you"; ?></span>
+        <?php
+        
       }
       ?>
       <?php

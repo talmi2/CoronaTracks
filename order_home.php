@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <style>
-      body{
+      #vac_test{
         text-align: center;
       }
       #lvaccin{
@@ -38,12 +38,20 @@
       ?>
 
       <form action="order_user_data.php" method="post">
+
+        <p id="vac_test">
         <label id="lvaccin"> Order a Vaccin </label>
         <input type="radio" name="order_type" id="vaccin" value="vaccin" required><br>
-        <label id="ltest">Order a Test </label>
-        <input type="radio" name="order_type" id="test" value="test"><br>
+        </p>
 
-        <input type="submit" name="order_type_submit" id="order_type_submit" class="button" value="Submit">
+        <p id="vac_test">
+          <label id="ltest">Order a Test </label>
+          <input type="radio" name="order_type" id="test" value="test"><br>
+        </p>
+
+        <p id="vac_test">
+          <input type="submit" name="order_type_submit" id="order_type_submit" class="button" value="Submit">
+        </p>
       </form>
       <?php
         require_once 'footer.php';
