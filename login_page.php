@@ -5,10 +5,10 @@
     <style>
       h1{
         text-align: center;
-  color: white;
-  font-size: 50px;
+        color: white;
+        font-size: 50px;
     }
-     
+
        body{
       background-color: #364061;
       text-align: center;
@@ -49,14 +49,13 @@
     </style>
   </head>
   <body>
-   
-    <?
+
+    <?php
   		require_once 'header.php';
   		?>
 
 
       <h2> Log in to your account: </h2>
-
 
     <form method="post">
       <label id="lemail">Email: </label>
@@ -67,7 +66,7 @@
       <input type="submit" name="formlogin" id="formlogin" value="Login"><br>
    </form>
 
-   <p class="msg">You don't have an account ?<a id="subscribe" href="registration_page.php">Subscribe</a></p>
+   <p class="msg">You don't have an account ? <a id="subscribe" href="registration_page.php">Subscribe</a></p>
    <?php include 'login.php'; ?>
 
    <?php

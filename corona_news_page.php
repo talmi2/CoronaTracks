@@ -40,11 +40,11 @@
   margin: 2px;
 }
  #msgg{
-     
+
   border-width: 15px;
     border-style: solid;
-    border-color: #800000;
-    background-color: #800000;
+    border-color: #5200cc;
+    background-color: #5200cc;
     color: white;
 }
 #author_admin{
@@ -53,7 +53,7 @@
 #author_doc{
   color:#00FF00;
 }
-    
+
     </style>
   </head>
   <body>
@@ -67,7 +67,7 @@
         <input type="text" name="date" value="<?php echo time(); ?>" style="display:none" >
         <input type="submit" name="formnews" id="formnews" value="Submit">
       </form>
-    
+
       <?php include 'corona_news.php'; ?>
 
       <?php
@@ -78,7 +78,7 @@
       date_default_timezone_set('Asia/Jerusalem');
 
       foreach ($result as $res) {
-        
+
         if($res['author'] == 'Admin'){
         ?>
         <div>

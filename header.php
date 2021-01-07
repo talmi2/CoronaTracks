@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <style>
       body{
-        background-image: url("wallpaper4.jpg");     
+        background-image: url("wallpaper4.jpg");
          }
       .menu_nav{
         background-color: #1E90FF;
@@ -13,7 +13,7 @@
   text-align: center;
   font-size: 15px;
       }
-      ul{
+      #nav{
          list-style-type: none;
   margin: 0;
   padding: 0;
@@ -21,10 +21,10 @@
   background-color: #1E90FF;
 
       }
-      li {
+      .nav_li {
   float: left;
 }
-    li a{
+    .nav_li a{
        display: block;
   color: white;
   text-align: center;
@@ -36,7 +36,7 @@
 }
 
 #deconnection{
-    background-color: #1E90FF; 
+    background-color: #1E90FF;
   border: none;
   color: white;
   padding: 7px 18px;
@@ -53,16 +53,16 @@
     global $db;
      ?>
     <nav class="menu_nav">
-  		<ul>
-  			<li><a href="home_page.php">Home</a></li>
+  		<ul id='nav'>
+  			<li class="nav_li"><a href="home_page.php">Home</a></li>
 
-  			<li><a href="corona_news_page.php">CoronaNews</a></li>
+  			<li class="nav_li"><a href="corona_news_page.php">CoronaNews</a></li>
 
-  			<li><a href="doctolib_home_page.php">Doctolib Forum</a></li>
-       
-        <li><a href="map.php">Map</a></li>
-        
-      <li><a href="order_home.php">Order a Vaccin or a test</a></li>
+  			<li class="nav_li"><a href="doctolib_home_page.php">Doctolib Forum</a></li>
+
+        <li class="nav_li"><a href="map.php">Map</a></li>
+
+      <li class="nav_li"><a href="order_home.php">Order a Vaccin or a test</a></li>
   		</ul>
   	</nav><br><br>
 

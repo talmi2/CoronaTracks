@@ -11,11 +11,35 @@
     		color: white;
     		font-size: 20px;
     	}
+
+      .global{
+        text-align: center;
+        margin-top: 150px;
+      }
+
+      #map{
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #1E90FF;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 14px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    text-decoration: none;
+  }
     </style>
   </head>
   <body>
 
-    <p>Your message was sent successfully, if you want to share us more information about the locations, <a href="map.php">fill the map</a> </p>
+   <div class="global">
+     <p>Your message was sent successfully, if you want to share us more information about the locations,</p>
+      <a href="map.php" id="map">Fill the map</a>
+    </div>
     <meta http-equiv="refresh" content="5;URL=/CoronaTracks/home_page.php">
   </body>
 </html>
