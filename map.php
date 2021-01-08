@@ -5,6 +5,11 @@
     <title></title>
 
     <style media="screen">
+        #title_map{
+          padding-left: 40px;
+          color: white;
+        }
+
         .map_stat{
           display: inline-flex;
         }
@@ -66,54 +71,39 @@
           border: 2px solid;
         }
 
-        .img_color_A{
-          width: 29px;
-          height: 29px;
-          position: absolute;
-          bottom: 61.5%;
-          padding-left: 121px;
-          z-index: 1;
-        }
-
-        .img_color_B{
-          width: 29px;
-          height: 29px;
-          position: absolute;
-          bottom: 37%;
-          padding-left: 121px;
-          z-index: 1;
-        }
-
-        .img_color_C{
-          width: 29px;
-          height: 29px;
-          position: absolute;
-          bottom: 12%;
-          padding-left: 121px;
-          z-index: 1;
-        }
-
-        .img_color_D{
-          width: 29px;
-          height: 29px;
-          position: absolute;
-          bottom: -12.7%;
-          padding-left: 121px;
-          z-index: 1;
-        }
-
         .stat{
           color: white;
           text-align: center;
-          padding-left: 70px;
-          height: 50%;
-
+          margin-left: 70px;
+          margin-top: 80px;
         }
 
         .img_color_city{
           border: 2px solid black;
           width: 25px;
           height: 25px;
+        }
+
+        .legend{
+          margin-left: 35px;
+          padding-left: 5px;
+          width: 500px;
+          background-color: #2b334e;
+        }
+
+        .legend_title{
+          color: white;
+          text-decoration: underline;
+        }
+
+        .img_legend{
+          border: 2px solid black;
+          width: 25px;
+          height: 25px;
+        }
+
+        .legend_explication{
+          color: white;
         }
 
     </style>
@@ -126,6 +116,7 @@
 
       <div class="map_stat">
         <div class="map">
+          <h1 id="title_map">Place where you go if you're sick:</h1>
           <ul id="A" class="A">
             <li>
               <?php $q= $db->prepare("SELECT * FROM map WHERE name = :name");
@@ -139,15 +130,15 @@
               <?php
                 if($result['nb_click'] > 20) {
                   ?>
-                  <input type="image" name="red" class="img_color_A" src="img_map/red_square.png"><input type="image" name="A1" class="img_map" src="img_map/case_A1.png"></input></input>
+                  <input type="image" name="A1" class="img_map" src="img_map/case_A1_red.png"></input>
                   <?php
                 } elseif ($result['nb_click'] > 10) {
                   ?>
-                  <input type="image" name="orange" class="img_color_A" src="img_map/orange_square.png"><input type="image" name="A1" class="img_map" src="img_map/case_A1.png"></input></input>
+                  <input type="image" name="A1" class="img_map" src="img_map/case_A1_orange.png"></input>
                   <?php
                 } else {
                   ?>
-                  <input type="image" name="green" class="img_color_A" src="img_map/green_square.png"><input type="image" name="A1" class="img_map" src="img_map/case_A1.png"></input></input>
+                  <input type="image" name="A1" class="img_map" src="img_map/case_A1_green.png"></input>
                   <?php
                 }
               ?>
@@ -164,15 +155,15 @@
             <?php
               if($result['nb_click'] > 20) {
                 ?>
-                <input type="image" name="red" class="img_color_A" src="img_map/red_square.png"><input type="image" name="A2" class="img_map" src="img_map/case_A2.png"></input></input>
+                <input type="image" name="A2" class="img_map" src="img_map/case_A2_red.png"></input>
                 <?php
               } elseif ($result['nb_click'] > 10) {
                 ?>
-                <input type="image" name="orange" class="img_color_A" src="img_map/orange_square.png"><input type="image" name="A2" class="img_map" src="img_map/case_A2.png"></input></input>
+                <input type="image" name="A2" class="img_map" src="img_map/case_A2_orange.png"></input>
                 <?php
               } else {
                 ?>
-                <input type="image" name="green" class="img_color_A" src="img_map/green_square.png"><input type="image" name="A2" class="img_map" src="img_map/case_A2.png"></input></input>
+                <input type="image" name="A2" class="img_map" src="img_map/case_A2_green.png"></input>
                 <?php
               }
             ?></form></li>
@@ -188,15 +179,15 @@
             <?php
               if($result['nb_click'] > 20) {
                 ?>
-                <input type="image" name="red" class="img_color_A" src="img_map/red_square.png"><input type="image" name="A3" class="img_map" src="img_map/case_A3.png"></input></input>
+                <input type="image" name="A3" class="img_map" src="img_map/case_A3_red.png"></input>
                 <?php
               } elseif ($result['nb_click'] > 10) {
                 ?>
-                <input type="image" name="orange" class="img_color_A" src="img_map/orange_square.png"><input type="image" name="A3" class="img_map" src="img_map/case_A3.png"></input></input>
+                <input type="image" name="A3" class="img_map" src="img_map/case_A3_orange.png"></input>
                 <?php
               } else {
                 ?>
-                <input type="image" name="green" class="img_color_A" src="img_map/green_square.png"><input type="image" name="A3" class="img_map" src="img_map/case_A3.png"></input></input>
+                <input type="image" name="A3" class="img_map" src="img_map/case_A3_green.png"></input>
                 <?php
               }
             ?></form></li>
@@ -212,15 +203,15 @@
             <?php
               if($result['nb_click'] > 20) {
                 ?>
-                <input type="image" name="red" class="img_color_A" src="img_map/red_square.png"><input type="image" name="A4" class="img_map" src="img_map/case_A4.png"></input></input>
+                <input type="image" name="A4" class="img_map" src="img_map/case_A4_red.png"></input>
                 <?php
               } elseif ($result['nb_click'] > 10) {
                 ?>
-                <input type="image" name="orange" class="img_color_A" src="img_map/orange_square.png"><input type="image" name="A4" class="img_map" src="img_map/case_A4.png"></input></input>
+                <input type="image" name="A4" class="img_map" src="img_map/case_A4_orange.png"></input>
                 <?php
               } else {
                 ?>
-                <input type="image" name="green" class="img_color_A" src="img_map/green_square.png"><input type="image" name="A4" class="img_map" src="img_map/case_A4.png"></input></input>
+                <input type="image" name="A4" class="img_map" src="img_map/case_A4_green.png"></input>
                 <?php
               }
             ?> </form></li>
@@ -236,15 +227,15 @@
             <?php
               if($result['nb_click'] > 20) {
                 ?>
-                <input type="image" name="red" class="img_color_A" src="img_map/red_square.png"><input type="image" name="A5" class="img_map" src="img_map/case_A5.png"></input></input>
+                <input type="image" name="A5" class="img_map" src="img_map/case_A5_red.png"></input>
                 <?php
               } elseif ($result['nb_click'] > 10) {
                 ?>
-                <input type="image" name="orange" class="img_color_A" src="img_map/orange_square.png"><input type="image" name="A5" class="img_map" src="img_map/case_A5.png"></input></input>
+                <input type="image" name="A5" class="img_map" src="img_map/case_A5_orange.png"></input>
                 <?php
               } else {
                 ?>
-                <input type="image" name="green" class="img_color_A" src="img_map/green_square.png"><input type="image" name="A5" class="img_map" src="img_map/case_A5.png"></input></input>
+                <input type="image" name="A5" class="img_map" src="img_map/case_A5_green.png"></input>
                 <?php
               }
             ?></form></li>
@@ -264,15 +255,15 @@
             <?php
               if($result['nb_click'] > 20) {
                 ?>
-                <input type="image" name="red" class="img_color_B" src="img_map/red_square.png"><input type="image" name="B1" class="img_map" src="img_map/case_B1.png"></input></input>
+                <input type="image" name="B1" class="img_map" src="img_map/case_B1_red.png"></input>
                 <?php
               } elseif ($result['nb_click'] > 10) {
                 ?>
-                <input type="image" name="orange" class="img_color_B" src="img_map/orange_square.png"><input type="image" name="B1" class="img_map" src="img_map/case_B1.png"></input></input>
+                <input type="image" name="B1" class="img_map" src="img_map/case_B1_orange.png"></input>
                 <?php
               } else {
                 ?>
-                <input type="image" name="green" class="img_color_B" src="img_map/green_square.png"><input type="image" name="B1" class="img_map" src="img_map/case_B1.png"></input></input>
+                <input type="image" name="B1" class="img_map" src="img_map/case_B1_green.png"></input>
                 <?php
               }
             ?>
@@ -289,15 +280,15 @@
             <?php
               if($result['nb_click'] > 20) {
                 ?>
-                <input type="image" name="red" class="img_color_B" src="img_map/red_square.png"><input type="image" name="B2" class="img_map" src="img_map/case_B2.png"></input></input>
+                <input type="image" name="B2" class="img_map" src="img_map/case_B2_red.png"></input>
                 <?php
               } elseif ($result['nb_click'] > 10) {
                 ?>
-                <input type="image" name="orange" class="img_color_B" src="img_map/orange_square.png"><input type="image" name="B2" class="img_map" src="img_map/case_B2.png"></input></input>
+                <input type="image" name="B2" class="img_map" src="img_map/case_B2_orange.png"></input>
                 <?php
               } else {
                 ?>
-                <input type="image" name="green" class="img_color_B" src="img_map/green_square.png"><input type="image" name="B2" class="img_map" src="img_map/case_B2.png"></input></input>
+                <input type="image" name="B2" class="img_map" src="img_map/case_B2_green.png"></input>
                 <?php
               }
             ?>
@@ -314,15 +305,15 @@
             <?php
               if($result['nb_click'] > 20) {
                 ?>
-                <input type="image" name="red" class="img_color_B" src="img_map/red_square.png"><input type="image" name="B3" class="img_map" src="img_map/case_B3.png"></input></input>
+                <input type="image" name="B3" class="img_map" src="img_map/case_B3_red.png"></input>
                 <?php
               } elseif ($result['nb_click'] > 10) {
                 ?>
-                <input type="image" name="orange" class="img_color_B" src="img_map/orange_square.png"><input type="image" name="B3" class="img_map" src="img_map/case_B3.png"></input></input>
+                <input type="image" name="B3" class="img_map" src="img_map/case_B3_orange.png"></input>
                 <?php
               } else {
                 ?>
-                <input type="image" name="green" class="img_color_B" src="img_map/green_square.png"><input type="image" name="B3" class="img_map" src="img_map/case_B3.png"></input></input>
+                <input type="image" name="B3" class="img_map" src="img_map/case_B3_green.png"></input>
                 <?php
               }
             ?>
@@ -339,15 +330,15 @@
             <?php
               if($result['nb_click'] > 20) {
                 ?>
-                <input type="image" name="red" class="img_color_B" src="img_map/red_square.png"><input type="image" name="B4" class="img_map" src="img_map/case_B4.png"></input></input>
+                <input type="image" name="B4" class="img_map" src="img_map/case_B4_red.png"></input>
                 <?php
               } elseif ($result['nb_click'] > 10) {
                 ?>
-                <input type="image" name="orange" class="img_color_B" src="img_map/orange_square.png"><input type="image" name="B4" class="img_map" src="img_map/case_B4.png"></input></input>
+                <input type="image" name="B4" class="img_map" src="img_map/case_B4_orange.png"></input>
                 <?php
               } else {
                 ?>
-                <input type="image" name="green" class="img_color_B" src="img_map/green_square.png"><input type="image" name="B4" class="img_map" src="img_map/case_B4.png"></input></input>
+                <input type="image" name="B4" class="img_map" src="img_map/case_B4_green.png"></input>
                 <?php
               }
             ?>
@@ -364,15 +355,15 @@
             <?php
               if($result['nb_click'] > 20) {
                 ?>
-                <input type="image" name="red" class="img_color_B" src="img_map/red_square.png"><input type="image" name="B5" class="img_map" src="img_map/case_B5.png"></input></input>
+                <input type="image" name="B5" class="img_map" src="img_map/case_B5_red.png"></input>
                 <?php
               } elseif ($result['nb_click'] > 10) {
                 ?>
-                <input type="image" name="orange" class="img_color_B" src="img_map/orange_square.png"><input type="image" name="B5" class="img_map" src="img_map/case_B5.png"></input></input>
+                <input type="image" name="B5" class="img_map" src="img_map/case_B5_orange.png"></input>
                 <?php
               } else {
                 ?>
-                <input type="image" name="green" class="img_color_B" src="img_map/green_square.png"><input type="image" name="B5" class="img_map" src="img_map/case_B5.png"></input></input>
+                <input type="image" name="B5" class="img_map" src="img_map/case_B5_green.png"></input>
                 <?php
               }
             ?>
@@ -393,15 +384,15 @@
             <?php
               if($result['nb_click'] > 20) {
                 ?>
-                <input type="image" name="red" class="img_color_C" src="img_map/red_square.png"><input type="image" name="C1" class="img_map" src="img_map/case_C1.png"></input></input>
+                <input type="image" name="C1" class="img_map" src="img_map/case_C1_red.png"></input>
                 <?php
               } elseif ($result['nb_click'] > 10) {
                 ?>
-                <input type="image" name="orange" class="img_color_C" src="img_map/orange_square.png"><input type="image" name="C1" class="img_map" src="img_map/case_C1.png"></input></input>
+                <input type="image" name="C1" class="img_map" src="img_map/case_C1_orange.png"></input>
                 <?php
               } else {
                 ?>
-                <input type="image" name="green" class="img_color_C" src="img_map/green_square.png"><input type="image" name="C1" class="img_map" src="img_map/case_C1.png"></input></input>
+                <input type="image" name="C1" class="img_map" src="img_map/case_C1_green.png"></input>
                 <?php
               }
             ?>
@@ -418,15 +409,15 @@
             <?php
               if($result['nb_click'] > 20) {
                 ?>
-                <input type="image" name="red" class="img_color_C" src="img_map/red_square.png"><input type="image" name="C2" class="img_map" src="img_map/case_C2.png"></input></input>
+                <input type="image" name="C2" class="img_map" src="img_map/case_C2_red.png"></input>
                 <?php
               } elseif ($result['nb_click'] > 10) {
                 ?>
-                <input type="image" name="orange" class="img_color_C" src="img_map/orange_square.png"><input type="image" name="C2" class="img_map" src="img_map/case_C2.png"></input></input>
+                <input type="image" name="C2" class="img_map" src="img_map/case_C2_orange.png"></input>
                 <?php
               } else {
                 ?>
-                <input type="image" name="green" class="img_color_C" src="img_map/green_square.png"><input type="image" name="C2" class="img_map" src="img_map/case_C2.png"></input></input>
+                <input type="image" name="C2" class="img_map" src="img_map/case_C2_green.png"></input>
                 <?php
               }
             ?>
@@ -443,15 +434,15 @@
             <?php
               if($result['nb_click'] > 20) {
                 ?>
-                <input type="image" name="red" class="img_color_C" src="img_map/red_square.png"><input type="image" name="C3" class="img_map" src="img_map/case_C3.png"></input></input>
+                <input type="image" name="C3" class="img_map" src="img_map/case_C3_red.png"></input>
                 <?php
               } elseif ($result['nb_click'] > 10) {
                 ?>
-                <input type="image" name="orange" class="img_color_C" src="img_map/orange_square.png"><input type="image" name="C3" class="img_map" src="img_map/case_C3.png"></input></input>
+                <input type="image" name="C3" class="img_map" src="img_map/case_C3_orange.png"></input>
                 <?php
               } else {
                 ?>
-                <input type="image" name="green" class="img_color_C" src="img_map/green_square.png"><input type="image" name="C3" class="img_map" src="img_map/case_C3.png"></input></input>
+                <input type="image" name="C3" class="img_map" src="img_map/case_C3_green.png"></input>
                 <?php
               }
             ?>
@@ -468,15 +459,15 @@
             <?php
               if($result['nb_click'] > 20) {
                 ?>
-                <input type="image" name="red" class="img_color_C" src="img_map/red_square.png"><input type="image" name="C4" class="img_map" src="img_map/case_C4.png"></input></input>
+                <input type="image" name="C4" class="img_map" src="img_map/case_C4_red.png"></input>
                 <?php
               } elseif ($result['nb_click'] > 10) {
                 ?>
-                <input type="image" name="orange" class="img_color_C" src="img_map/orange_square.png"><input type="image" name="C4" class="img_map" src="img_map/case_C4.png"></input></input>
+                <input type="image" name="C4" class="img_map" src="img_map/case_C4_orange.png"></input>
                 <?php
               } else {
                 ?>
-                <input type="image" name="green" class="img_color_C" src="img_map/green_square.png"><input type="image" name="C4" class="img_map" src="img_map/case_C4.png"></input></input>
+                <input type="image" name="C4" class="img_map" src="img_map/case_C4_green.png"></input>
                 <?php
               }
             ?>
@@ -493,15 +484,15 @@
             <?php
               if($result['nb_click'] > 20) {
                 ?>
-                <input type="image" name="red" class="img_color_C" src="img_map/red_square.png"><input type="image" name="C5" class="img_map" src="img_map/case_C5.png"></input></input>
+                <input type="image" name="C5" class="img_map" src="img_map/case_C5_red.png"></input>
                 <?php
               } elseif ($result['nb_click'] > 10) {
                 ?>
-                <input type="image" name="orange" class="img_color_C" src="img_map/orange_square.png"><input type="image" name="C5" class="img_map" src="img_map/case_C5.png"></input></input>
+                <input type="image" name="C5" class="img_map" src="img_map/case_C5_orange.png"></input>
                 <?php
               } else {
                 ?>
-                <input type="image" name="green" class="img_color_C" src="img_map/green_square.png"><input type="image" name="C5" class="img_map" src="img_map/case_C5.png"></input></input>
+                <input type="image" name="C5" class="img_map" src="img_map/case_C5_green.png"></input>
                 <?php
               }
             ?>
@@ -522,15 +513,15 @@
             <?php
               if($result['nb_click'] > 20) {
                 ?>
-                <input type="image" name="red" class="img_color_D" src="img_map/red_square.png"><input type="image" name="D1" class="img_map" src="img_map/case_D1.png"></input></input>
+                <input type="image" name="D1" class="img_map" src="img_map/case_D1_red.png"></input>
                 <?php
               } elseif ($result['nb_click'] > 10) {
                 ?>
-                <input type="image" name="orange" class="img_color_D" src="img_map/orange_square.png"><input type="image" name="D1" class="img_map" src="img_map/case_D1.png"></input></input>
+                <input type="image" name="D1" class="img_map" src="img_map/case_D1_orange.png"></input>
                 <?php
               } else {
                 ?>
-                <input type="image" name="green" class="img_color_D" src="img_map/green_square.png"><input type="image" name="D1" class="img_map" src="img_map/case_D1.png"></input></input>
+                <input type="image" name="D1" class="img_map" src="img_map/case_D1_green.png"></input>
                 <?php
               }
             ?>
@@ -547,15 +538,15 @@
             <?php
               if($result['nb_click'] > 20) {
                 ?>
-                <input type="image" name="red" class="img_color_D" src="img_map/red_square.png"><input type="image" name="D2" class="img_map" src="img_map/case_D2.png"></input></input>
+                <input type="image" name="D2" class="img_map" src="img_map/case_D2_red.png"></input>
                 <?php
               } elseif ($result['nb_click'] > 10) {
                 ?>
-                <input type="image" name="orange" class="img_color_D" src="img_map/orange_square.png"><input type="image" name="D2" class="img_map" src="img_map/case_D2.png"></input></input>
+                <input type="image" name="D2" class="img_map" src="img_map/case_D2_orange.png"></input>
                 <?php
               } else {
                 ?>
-                <input type="image" name="green" class="img_color_D" src="img_map/green_square.png"><input type="image" name="D2" class="img_map" src="img_map/case_D2.png"></input></input>
+                <input type="image" name="D2" class="img_map" src="img_map/case_D2_green.png"></input>
                 <?php
               }
             ?>
@@ -572,15 +563,15 @@
             <?php
               if($result['nb_click'] > 20) {
                 ?>
-                <input type="image" name="red" class="img_color_D" src="img_map/red_square.png"><input type="image" name="D3" class="img_map" src="img_map/case_D3.png"></input></input>
+                <input type="image" name="D3" class="img_map" src="img_map/case_D3_red.png"></input>
                 <?php
               } elseif ($result['nb_click'] > 10) {
                 ?>
-                <input type="image" name="orange" class="img_color_D" src="img_map/orange_square.png"><input type="image" name="D3" class="img_map" src="img_map/case_D3.png"></input></input>
+                <input type="image" name="D3" class="img_map" src="img_map/case_D3_orange.png"></input>
                 <?php
               } else {
                 ?>
-                <input type="image" name="green" class="img_color_D" src="img_map/green_square.png"><input type="image" name="D3" class="img_map" src="img_map/case_D3.png"></input></input>
+                <input type="image" name="D3" class="img_map" src="img_map/case_D3_green.png"></input>
                 <?php
               }
             ?>
@@ -597,15 +588,15 @@
             <?php
               if($result['nb_click'] > 20) {
                 ?>
-                <input type="image" name="red" class="img_color_D" src="img_map/red_square.png"><input type="image" name="D4" class="img_map" src="img_map/case_D4.png"></input></input>
+                <input type="image" name="D4" class="img_map" src="img_map/case_D4_red.png"></input>
                 <?php
               } elseif ($result['nb_click'] > 10) {
                 ?>
-                <input type="image" name="orange" class="img_color_D" src="img_map/orange_square.png"><input type="image" name="D4" class="img_map" src="img_map/case_D4.png"></input></input>
+                <input type="image" name="D4" class="img_map" src="img_map/case_D4_orange.png"></input>
                 <?php
               } else {
                 ?>
-                <input type="image" name="green" class="img_color_D" src="img_map/green_square.png"><input type="image" name="D4" class="img_map" src="img_map/case_D4.png"></input></input>
+                <input type="image" name="D4" class="img_map" src="img_map/case_D4_red.png"></input>
                 <?php
               }
             ?>
@@ -622,20 +613,33 @@
             <?php
               if($result['nb_click'] > 20) {
                 ?>
-                <input type="image" name="red" class="img_color_D" src="img_map/red_square.png"><input type="image" name="D5" class="img_map" src="img_map/case_D5.png"></input></input>
+                <input type="image" name="D5" class="img_map" src="img_map/case_D5_red.png"></input>
                 <?php
               } elseif ($result['nb_click'] > 10) {
                 ?>
-                <input type="image" name="orange" class="img_color_D" src="img_map/orange_square.png"><input type="image" name="D5" class="img_map" src="img_map/case_D5.png"></input></input>
+                <input type="image" name="D5" class="img_map" src="img_map/case_D5_orange.png"></input>
                 <?php
               } else {
                 ?>
-                <input type="image" name="green" class="img_color_D" src="img_map/green_square.png"><input type="image" name="D5" class="img_map" src="img_map/case_D5.png"></input></input>
+                <input type="image" name="D5" class="img_map" src="img_map/case_D5_green.png"></input>
                 <?php
               }
             ?>
           </form></li>
           </ul>
+
+          <div id="legend" class="legend">
+            <h3 id="legend_title" class="legend_title">Legend:</h3>
+
+            <img src="img_map/green_square.png" alt="green_square" id="img_legend" class="img_legend">
+            <span id="legend_explication" class="legend_explication">Green quarter (less than 10 people sick in the quarter)</span><br>
+
+            <img src="img_map/orange_square.png" alt="orange_square" id="img_legend" class="img_legend">
+            <span id="legend_explication" class="legend_explication">Orange quarter (between 10 and 20 people sick in the quarter)</span><br>
+
+            <img src="img_map/red_square.png" alt="red_square" id="img_legend" class="img_legend">
+            <span id="legend_explication" class="legend_explication">Red quarter (more than 20 people sick in the quarter)</span><br>
+          </div>
 
           <!--------------------------------------------------------------------------------------------------------------->
         </div>
