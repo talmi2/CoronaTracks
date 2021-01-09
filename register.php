@@ -43,17 +43,17 @@
 									?><span id="success"><?php echo "Your account was successfully created, to complete your registration as a doctor, please send your medical degree to the mail: talouche@hotmail.fr";
 										?></span>
 										<a href="/CoronaTracks"></a>
-										
+
 									<?php
 								} else {
 									?>
 									<span id="error" class="error"><?php echo "This mail already exist"; ?></span>
-									<?php									
+									<?php
 								}
 							} else 	{
 								?>
 								<span id="error" class="error"><?php echo "There is already an account with this ID"; ?></span>
-								<?php	
+								<?php
 							}
 
 						} else {
@@ -62,6 +62,11 @@
 							<?php
 						}
 
+				}
+				else {
+					?>
+					<span id="error" class="error"><?php echo "Complete all field"; ?></span>
+					<?php
 				}
 			}
 
